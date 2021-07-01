@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar ke Akun</title>
+    <!--FAVICON-->
+    <link rel="icon" href="/img/icon.png" type="image/png" sizes="16x16">
+    <!--CSS STYLE-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!--FONTAWESOME-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-search-pseudo-elements></script>
+
+    <!-- Parallax -->
+    <script type='text/javascript'>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var scr = $(document).scrollTop() / 10; // Angka 10 lebih kencang, 100 = tidak bergerak
+                $(".image1").css('background-position', '50% ' + scr + '%');
+                // Selector yang dipilih .image1, sesuaikan dengan css yang kamu buat
+            });
+        });
+    </script>
+
+    <script type='text/javascript'>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var scr = $(document).scrollTop() / 10; // Angka 10 lebih kencang, 100 = tidak bergerak
+                $(".image1").css('background-position', '50% ' + scr + '%');
+                // Selector yang dipilih .image1, sesuaikan dengan css yang kamu buat
+            });
+        });
+    </script>
+
+    <style>
+        body {
+            background-image: url("img/login-bg.png");
+            font-family: 'Poppins', sans-serif !important
+        }
+        
+        form {
+            border: 3px solid #f1f1f1;
+            border-radius: 20px;
+            background-color: white;
+            text-align: center;
+            width: 40%;
+            margin-left: 30%;
+        }
+        
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #FF473E;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: 0px solid #DDDDDD;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 40%;
+            font-family: 'Poppins', sans-serif !important;
+        }
+        
+        button:hover {
+            opacity: 0.8;
+        }
+        
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+        
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+        
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+        
+        .container {
+            padding: 16px;
+        }
+        
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+        /* Change styles for span and cancel button on extra small screens */
+        
+        .image1 {
+            width: 100%;
+            height: 100%;
+            background-image: url("img/login-bg.png");
+            background-size: cover;
+            /* Agar tampilan gambar tetap proposional dengan ukuran layar */
+            background-position: center;
+            /* Posisi gambar ditengah */
+            background-attachment: fixed;
+            /* Ini lah yang membuat gambar dapat di scroll */
+            background-repeat: no-repeat;
+            /* Cocok untuk gambar besar agar tidak ada perulangan */
+        }
+        
+        .isi1 {
+            width: 100%;
+            padding: 50px 15px;
+            /* Membuat tulisan berada ditengah elemen konten dan efek tinggi otomatis.*/
+        }
+        
+        @media screen and (max-width:1024px) {
+            .image1 {
+                background-attachment: scroll;
+                /* Mematikan efek dengan, layar yang dibawah resolusi 1024px */
+            }
+        }
+        
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body class="image1" style="margin-top: 80px; text-align: center;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <form class="form-signin" action="/action_page.php" method="post">
+                    <div class="imgcontainer">
+                        <br>
+                        <!-- <img src="img_avatar2.png" alt="Avatar" class="avatar"> -->
+                        <h2 id="red" style=" font-family: 'Poppins', sans-serif !important">Daftar ke akun</h2>
+
+                        <br>
+                    </div>
+
+                    <div class="container">
+                        <!-- <label for="uname"><b>email</b></label> -->
+                        <input type="text" style="width : 80%; border-radius: 20px;" placeholder="nama depan" name="namadpn" required>
+                        <input type="text" style="width : 80%; border-radius: 20px;" placeholder="nama belakang" name="namablkg" required>
+                        <input type="text" style="width : 80%; border-radius: 20px;" placeholder="email" name="email" required>
+                        <!-- <label for="psw"><b>Password</b></label> -->
+                        <input type="password" style="width : 80%; border-radius: 20px;" placeholder="password" name="psw" required>
+                        <input type="password" style="width : 80%; border-radius: 20px;" placeholder="konfirmasi password" name="konfirmasipsw" required>
+                        <input type="text" name="jeniskelamin" list="jeniskelamin" style="width : 80%; border-radius: 20px;" placeholder="jenis kelamin" name="jeniskelamin" required>
+                        <datalist id="jeniskelamin">
+                            <option value="perempuan">
+                            <option value="laki-laki">
+                        </datalist>
+
+                        <script>
+                            /* When the user clicks on the button, 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     toggle between hiding and showing the dropdown content */
+                            function myFunction() {
+                                document.getElementById("myDropdown").classList.toggle("show");
+                            }
+
+                            // Close the dropdown if the user clicks outside of it
+                            window.onclick = function(event) {
+                                if (!event.target.matches('.dropbtn')) {
+                                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                                    var i;
+                                    for (i = 0; i < dropdowns.length; i++) {
+                                        var openDropdown = dropdowns[i];
+                                        if (openDropdown.classList.contains('show')) {
+                                            openDropdown.classList.remove('show');
+                                        }
+                                    }
+                                }
+                            }
+                        </script>
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <button type="submit" class="btn btn-danger">Daftar</button>
+                        <br>
+                        <a href="/login.html"><button type="button" class="btn btn-danger" style="  background-color: white; color: #FF473E; padding: 14px 20px; margin: 8px 0; cursor: pointer; width: 40%; border-radius: 20px;">Masuk</button></a>
+                        <br>
+                        <br><br>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
